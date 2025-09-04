@@ -336,25 +336,25 @@ section { padding: 80px 20px; text-align: center; }
 
 
 
+/* ABOUT */
 .about-us {
-  position: relative;  /* nécessaire pour le ::before */
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  padding: 30px 20%;
+  padding: 60px 12%;
   background: url('images/image3.jpg') center/cover no-repeat; 
   z-index: 1;
 }
-
-
 
 .about-us::before {
   content: "";
   position: absolute;
   top: 0; 
   left: 0;
-  width: 100%; height: 100%;
+  width: 100%; 
+  height: 100%;
   background: #f9fafcee; /* opacité réglable */
   z-index: -1; /* reste derrière le contenu */
 }
@@ -362,11 +362,9 @@ section { padding: 80px 20px; text-align: center; }
 .about-text {
   flex: 1;
   text-align: left;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   line-height: 1.7;
   color: #001e3ce6;
-  
-    /* Animation texte (depuis la gauche) */
   opacity: 0;
   transform: translateX(-80px);
   transition: all 0.8s ease-out;
@@ -374,15 +372,11 @@ section { padding: 80px 20px; text-align: center; }
 
 .about-image {
   flex: 1;
-
-  /* Animation image (depuis la droite) */ 
   opacity: 0;
   transform: translateX(80px);
   transition: all 0.8s ease-out;
-
 }
 
-/* Quand visible */
 .about-text.show,
 .about-image.show {
   opacity: 1;
@@ -391,19 +385,40 @@ section { padding: 80px 20px; text-align: center; }
 
 .about-text h2 {
   font-size: 3rem;
-  margin-bottom: 10px;
-   font-family: 'Kalnia';
+  margin-bottom: 15px;
+  font-family: 'Kalnia';
+  color: #001e3ce6;
 }
-
-
 
 .about-image img {
-  width: 100%;
-  height:450px;
-  border-radius: 20px;   /* coins arrondis */
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1); /* ombre douce */
+width: 100%;
+  height: 50%;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
   object-fit: cover;
 }
+
+/* Responsive - Mobile */
+@media (max-width: 900px) {
+  .about-us {
+    flex-direction: column;
+    padding: 40px 20px; /* ajoute du padding autour */
+    text-align: left;
+  }
+
+  .about-text {
+    padding: 0 10px; /* empêche le texte de coller aux bords */
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .about-image {
+    width: 100%;
+    margin-bottom: 20px;
+    transform: translateX(0); /* corrige l’animation sur mobile */
+  }
+}
+
 
 
 /* WHY US */
@@ -846,7 +861,7 @@ footer {
   .navbar { padding: 10px 40px; gap: 15px; font-size: 0.9rem; }
   .hero-content h1 { font-size: 2.5rem; }
   .hero-content p { font-size: 1.2rem; }
-  .about-us, .contact-us { padding: 40px 10%; }
+  .contact-us { padding: 40px 10%; }
   .why-us { padding: 40px 10%; }
 }
 
@@ -876,9 +891,6 @@ footer {
   .services-intro { min-width: unset; }
   .services-cards { grid-template-columns: 1fr; }
 
-  /* ABOUT US */
-  .about-us { flex-direction: column; padding: 40px 20px; }
-  .about-image img { height: 250px; }
 
   /* WHY US */
   .why-us { padding: 40px 20px; }
@@ -898,3 +910,5 @@ footer {
   /* FOOTER */
   footer { padding: 40px 20px; font-size: 0.8rem; }
 }
+
+
