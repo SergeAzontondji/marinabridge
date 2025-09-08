@@ -79,6 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const testimonialsTitle = document.querySelector(".testimonials .section-title");
   const testimonialsSubtitle = document.querySelector(".testimonials .section-subtitle");
   const testimonialCards = document.querySelectorAll(".testimonial-card");
+  const testimonialCards2 = document.querySelectorAll(".testimonial-card2");
   const contactImage = document.querySelector(".contact-image");
   const contactInfo = document.querySelector(".contact-info");
   const contactDetails = document.querySelectorAll(".contact-details li");
@@ -130,6 +131,13 @@ document.addEventListener("DOMContentLoaded", () => {
               entry.target.classList.add("show");
             }, index * 200);
           }
+
+          else if (entry.target.classList.contains("testimonial-card2")) {
+            setTimeout(() => {
+              entry.target.classList.add("show");
+            }, index * 400);
+          }
+
           // Contact (image + info + détails)
           else if (
             entry.target.classList.contains("contact-image") ||
@@ -171,6 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
   observer.observe(testimonialsTitle);
   observer.observe(testimonialsSubtitle);
   testimonialCards.forEach(card => observer.observe(card));
+  testimonialCards2.forEach(card => observer.observe(card));
 
   // Contact
   observer.observe(contactImage);
