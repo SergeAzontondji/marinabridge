@@ -1,7 +1,6 @@
 /* RESET */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { 
-  font-family: 'Saira', sans-serif;
+body {  font-family: 'Saira', sans-serif;
   color: #333; 
 }
 
@@ -599,7 +598,9 @@ width: 100%;
   justify-content: space-between;
   gap: 3rem;
   padding: 60px 20%;
+  margin : 20px 20px 0 ;
   background: #f9fafc;
+  text-align: left;
 }
 
 .contact-image {
@@ -953,7 +954,7 @@ footer {
 @media (max-width: 992px) {
   .navbar { padding: 10px 40px; gap: 15px; font-size: 0.9rem; }
   .hero-content h1 { font-size: 1.5rem; }
-  .hero-content p { font-size: 1rem; }
+  .hero-content p { font-size: 0.8rem; }
   .contact-us { padding: 40px 10%; }
   .why-us { padding: 40px 10%; }
 }
@@ -980,8 +981,12 @@ footer {
   .logo img { width: 30px; height: 30px; }
   
   /* HERO */
+  .hero-content {
+    max-width: 90%;
+    padding: 28px;
+  }
   .hero-content h1 { font-size: 1.5rem; }
-  .hero-content p { font-size: 1rem; }
+  .hero-content p { font-size: 0.8rem; }
   .hero-btn { font-size: 1.5rem; 
   padding: 8px 12px; }
 
